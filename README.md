@@ -22,6 +22,7 @@ This repository contains 8 progressive backend tutorial projects, each focusing 
 5. **Authentication** - JWT-based authentication system
 6. **Cookie Management** - Working with cookies and secure sessions
 7. **Spotify Clone** - Advanced project with file uploads, encryption, and user management
+8. **Testing with Jest & Supertest** - Unit and integration testing with validation
 
 Each project builds upon concepts learned in previous projects, creating a learning path from basics to more complex applications.
 
@@ -40,7 +41,7 @@ backend-tut/
 ├── 05-authentication/          # JWT authentication
 ├── 06-cookies/                 # Cookie-based sessions
 ├── 07-spotify-clone/           # Advanced Spotify clone
-└── 08/                         # (Reserved for future projects)
+└── 08-jest-supertest-express-validator/  # Testing and validation
 ```
 
 ---
@@ -320,6 +321,65 @@ IMAGEKIT_URL_ENDPOINT=your_imagekit_url
 
 ---
 
+### 8. 08-jest-supertest-express-validator - Testing and Validation
+
+**Description:** Master testing frameworks and input validation for Express applications. Learn how to write unit tests, integration tests, and validate API requests for production-ready code.
+
+**Key Concepts:**
+- Unit testing with Jest
+- Integration testing with Supertest
+- API endpoint testing
+- Request validation with express-validator
+- Input sanitization
+- Error handling in tests
+- Test coverage
+- Mocking and stubbing
+- TDD (Test-Driven Development) patterns
+- Test organization and best practices
+
+**Dependencies:**
+- `express` ^5.2.1
+- `jest` ^29.x.x
+- `supertest` ^6.x.x
+- `express-validator` ^7.x.x
+- `dotenv` ^17.4.2
+
+**Getting Started:**
+```bash
+cd 08-jest-supertest-express-validator
+npm install
+npm test                 # Run all tests
+npm run test:watch      # Run tests in watch mode
+npm run test:coverage   # Run tests with coverage report
+```
+
+**Scripts:**
+- `npm test` - Run test suite
+- `npm run test:watch` - Run tests in watch mode
+- `npm run test:coverage` - Generate coverage report
+- `npm start` - Start the server
+
+**Key Features:**
+- Comprehensive test suites for all endpoints
+- Input validation and sanitization
+- Error handling tests
+- Edge case coverage
+- Mock database and external services
+- API contract testing
+- Performance testing basics
+- Test fixtures and factories
+
+**Test Examples:**
+- Testing GET endpoints with various responses
+- Testing POST endpoints with valid/invalid data
+- Testing authentication middleware
+- Testing error scenarios
+- Testing data validation
+
+**Use Case:** Essential for building reliable, maintainable, and production-ready backend applications. Understand how to write effective tests and validate user input to prevent bugs and security vulnerabilities.
+
+---
+
 ## Prerequisites
 
 ### Required Software
@@ -409,12 +469,15 @@ npm start               # Start the server (or npm run dev)
 | `dotenv` | ^17.4.2 | Environment variable management |
 | `multer` | ^2.1.1 | Middleware for file uploads |
 | `@imagekit/nodejs` | ^7.6.1 | Image upload and management |
+| `express-validator` | ^7.x.x | Input validation and sanitization |
 
-### Development
+### Testing & Development
 
-| Package | Purpose |
-|---------|---------|
-| `nodemon` | Auto-restart server on file changes |
+| Package | Version | Purpose |
+|---------|---------|----------|
+| `jest` | ^29.x.x | JavaScript testing framework |
+| `supertest` | ^6.x.x | HTTP assertion library for testing |
+| `nodemon` | - | Auto-restart server on file changes |
 
 ---
 
@@ -542,20 +605,22 @@ npm install
 5. **05-authentication** → Implement user authentication
 6. **06-cookies** → Master session management
 7. **07-spotify-clone** → Combine all concepts in real-world project
+8. **08-jest-supertest-express-validator** → Learn testing and validation for production
 
 ---
 
 ## Project Features Summary
 
-| Project | Express | MongoDB | JWT | Cookies | Multer | ImageKit | bcryptjs |
-|---------|---------|---------|-----|---------|--------|----------|----------|
-| 01-node | ✅ | - | - | - | - | - | - |
-| 02-notes-api | ✅ | - | - | - | - | - | - |
-| 03-notes-mongoDB | ✅ | ✅ | - | - | - | - | - |
-| 04-insta-post-dummy | ✅ | ✅ | - | - | - | - | - |
-| 05-authentication | ✅ | ✅ | ✅ | - | - | - | - |
-| 06-cookies | ✅ | ✅ | ✅ | ✅ | - | - | - |
-| 07-spotify-clone | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ |
+| Project | Express | MongoDB | JWT | Cookies | Multer | ImageKit | bcryptjs | Jest | Supertest | express-validator |
+|---------|---------|---------|-----|---------|--------|----------|----------|------|-----------|-------------------|
+| 01-node | ✅ | - | - | - | - | - | - | - | - | - |
+| 02-notes-api | ✅ | - | - | - | - | - | - | - | - | - |
+| 03-notes-mongoDB | ✅ | ✅ | - | - | - | - | - | - | - | - |
+| 04-insta-post-dummy | ✅ | ✅ | - | - | - | - | - | - | - | - |
+| 05-authentication | ✅ | ✅ | ✅ | - | - | - | - | - | - | - |
+| 06-cookies | ✅ | ✅ | ✅ | ✅ | - | - | - | - | - | - |
+| 07-spotify-clone | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | - | - | - |
+| 08-jest-supertest | ✅ | - | - | - | - | - | - | ✅ | ✅ | ✅ |
 
 ---
 
