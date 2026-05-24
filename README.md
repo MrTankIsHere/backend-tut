@@ -1,4 +1,4 @@
-# Backend Tutorials
+# Backend Learning
 
 A comprehensive collection of Node.js and Express backend projects covering fundamental to advanced concepts. This repository contains multiple tutorial projects that progressively build your backend development skills.
 
@@ -559,16 +559,6 @@ npm install
 
 ---
 
-## Contributing
-
-Feel free to:
-- Add improvements to existing projects
-- Fix bugs or issues
-- Enhance documentation
-- Share additional concepts and examples
-
----
-
 ## Resources
 
 ### Official Documentation
@@ -609,5 +599,3 @@ Bhautik
 ---
 
 **Happy Learning! 🚀**
-
-Start with project 01-node and progress sequentially to build your backend development skills from basics to advanced concepts.
